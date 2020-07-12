@@ -1,0 +1,140 @@
+intents:
+- affirm
+- restaurant_search
+- greet
+- goodbye
+- deny
+- send_email
+- thankyou
+config:
+  store_entities_as_slots: true
+entities:
+- cuisine
+- location
+- budget
+- email
+- price
+
+slots:
+  cuisine:
+    initial_value: null
+    type: text
+  location:
+    initial_value: null
+    type: text
+  budget:
+    initial_value: null
+    type: text
+  email:
+    initial_value: null
+    type: text
+responses:
+  utter_ask_budget:
+  - text: Which average budget segment for two people looking for?
+    buttons:
+    - title: Lesser than Rs. 300
+      payload: Lesser than Rs. 300
+    - title: Rs. 300 to 700
+      payload: Rs. 300 to 700
+    - title: More than 700
+      payload: More than 700
+  utter_ask_cuisine:
+  - text: What kind of cuisine would you prefer?
+    buttons:
+    - title: Chinese
+      payload: Chinese
+    - title: Mexican
+      payload: Mexican
+    - title: Italian
+      payload: Italian
+    - title: American
+      payload: American
+    - title: South Indian
+      payload: South Indian
+    - title: North Indian
+      payload: North Indian
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  - text: Hi there! How can I help you?
+  utter_ask_location:
+  - text: In what location?
+  - text: what will be the location?
+  - text: Great! In which location you are looking for?
+  - text: Fantastic. In which location you are looking for restaurant?
+  - text: Awesome!! So, whats your location?
+  utter_default:
+  - text: i cannot understand
+  - text: Sorry! did'nt get you Can u please ask again ?
+  utter_goodbye:
+  - text: Thank you for contacting us. Have a Good day !
+  - text: Have a Great day !! Bye-bye
+  - text: Goodbye see you soon :)
+  utter_greet:
+  - text: Welcome to Foodie! How may i help you today ?
+  - text: Hi Welcome to Foodie! How may i help you ?
+  - text: Hola! How may i help you ?
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hi, Foodie ! how can I help you ?
+  - text: Hey, how can I help you today ?
+  - text: Hey, How is it going. How May I help you Today ?
+  utter_ask_to_email:
+  - text: Do you want the details of top 10 restaurants on your email?
+  - text: Do I mail you the details of top 10 restaurants?
+  - text: Should I send you the details of top 10 restaurants on your mail?
+  - text: Should I mail you the details of top 10 restaurants on your location?
+  utter_ask_email_id:
+  - text: To which email id should I send it to?
+  - text: To which email address should I send it to?
+  - text: To which email address should I send the top 10 restaurants?
+  - text: So, what's your email id?
+  - text: Could you please tell me your email id?
+  utter_top_5_restaurant:
+  - text: 'These are the top rated restaurants:'
+  - text: 'So, here comes the top rated restaurants in your preferred location:'
+  utter_ask_sorry:
+  - text: 'Sorry!! No restaurant match for your selected criteria. Please Try some other options'
+  - text: 'So, Sorry!! No restaurant found for your criteria. Please Try some other options'  
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_sorry
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_ask_email_id
+- utter_top_5_restaurant
+- utter_ask_to_email
+- action_search_restaurants
+- action_send_email
+- action_check_cuisine
+- action_check_location
+- action_check_email
+- action_restarted
+actions:
+- action_search_restaurants
+- action_send_email
+- action_check_cuisine
+- action_check_location
+- action_check_email
+- action_restarted
+- actions.ActionSearchRestaurants
+- actions.ActionSendEmail
+- actions.ActionCheckCuisine
+- actions.ActionCheckLocation
+- actions.ActionCheckEmail
+- actions.ActionRestarted
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_ask_to_email
+- utter_ask_email_id
+- utter_ask_budget
+- utter_ask_sorry
+- utter_top_5_restaurant

@@ -1,0 +1,6 @@
+language: en_core_web_md
+pipeline: pretrained_embeddings_spacy
+policies:
+- name: MemoizationPolicy
+- name: KerasPolicy
+- name: MappingPolicy
